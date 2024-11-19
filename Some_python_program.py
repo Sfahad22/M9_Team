@@ -5,24 +5,24 @@
 # Updated by: Martin, Fahad
 #
 #
-# Document what the following lines of code do here
+# This block of code imports * from tkinder. Then it sets the title of root as "simple Calculator."
 from tkinter import *
 
 root = Tk()
 
 root.title("Simple Calculator")
 
-# This sets the size of the calculator and the grid of buttons
+# This sets the size of the calculator and the grid of buttons.
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
-# Document what the following lines of code do here
+# Defines the function: button_click with the parameter number. When a number button is clicked it will add that number to the current one.
 def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
 
-# Document what the following lines of code do here
+# When the clear button is pressed the line will delete and the calculation ends.
 def button_clear():
     e.delete(0, END)
 
