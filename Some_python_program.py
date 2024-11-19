@@ -1,8 +1,8 @@
 # M9_Team
 
 # Program description goes here
-# Updated on:
-# Updated by:
+# Updated on: November 19
+# Updated by: Martin
 #
 #
 # Document what the following lines of code do here
@@ -12,7 +12,7 @@ root = Tk()
 
 root.title("Simple Calculator")
 
-# Document what the following lines of code do here
+# This sets the size of the calculator and the grid of buttons
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
