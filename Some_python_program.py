@@ -2,7 +2,7 @@
 
 # Program description goes here
 # Updated on: November 19
-# Updated by: Martin
+# Updated by: Martin, Fahad
 #
 #
 # Document what the following lines of code do here
@@ -53,7 +53,9 @@ def button_equal():
     else:
         e.insert(0, "Invalid!!!")
 
-# Document what the following lines of code do here
+# # Lambda function is used for this code.
+# I believe this buttons are created to select if the user wants to enter a number from 0-9 and if they wants to add, equal or wants to clear it.
+#
 #
 # NOTE: We did not cover Lambda functins in class. A Lambda Function 
 # in Python programming is an anonymous function
@@ -77,14 +79,14 @@ button_add =  Button(root, text="+", padx=39, pady=20, command=lambda: button_op
 button_equal =  Button(root, text="   =   ", padx=79, pady=20, command=button_equal)
 button_clear =  Button(root, text="Clear", padx=79, pady=20, command=button_clear)
 
-# Document what the following lines of code do here
+# This is same like from the above code but this buttons is use to subtract, multiply and divide. To understand it better they also provided buttons with symbols of subtract, multiply & divide. 
 
 # See the description of a Lambda function above
 button_subtract =  Button(root, text="-", padx=40, pady=20, command=lambda: button_operator("-"))
 button_multiply =  Button(root, text="*", padx=40, pady=20, command=lambda: button_operator("*"))
 button_divide =  Button(root, text="/", padx=40, pady=20, command=lambda: button_operator("/"))
 
-# Document what the following lines of code do here
+# The below code is assigning buttons in the row and in columns to make it understandable & easier for users.
 
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
@@ -107,6 +109,6 @@ button_subtract.grid(row=6, column=0)
 button_multiply.grid(row=6, column=1)
 button_divide.grid(row=6, column=2)
 
-# Document what the following line of code do here
+# mainloop function is associated with GUI, Tkinter programming library is used.
 
 root.mainloop()
