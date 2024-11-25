@@ -1,11 +1,13 @@
 # M9_Team
 
-# Program description goes here
+# This is a simple calculator program. Users can perform calculations such as addition, subtraction, multiplication, and division. 
+# Users enter two numbers, the operator, and the results will be displayed.
 # Updated on: November 24
 # Updated by: Martin, Fahad
 #
 #
-# This block of code imports * from tkinder. Then it sets the title of root as "simple Calculator."
+# This block of code imports * from tkinder (import * is used to import all the variables, functions, and classes into the current calculator module).
+# Then the title of root is set as "simple Calculator."
 from tkinter import *
 
 root = Tk()
@@ -26,7 +28,7 @@ def button_click(number):
 def button_clear():
     e.delete(0, END)
 
-# Defines the function: button_operator. When an operator button is clicked such as +, -, x, or / it will save that number and operator before performing a calculation. 
+# Defines the function: button_operator. When an operator button is clicked such as +, -, *, or / it will save that number and operator before performing a calculation. 
 # It also converts the first number from a string to an integer.
 def button_operator(operator):
     first_number = e.get()
@@ -40,6 +42,7 @@ def button_operator(operator):
 
 # When the equal button is pressed the following conditional statements will be executed.
 # The function will check which operator was pressed and perform the calculation with that value.
+# It also converts the second number from a string to an integer before performing the calculation.
 def button_equal():
     second_number = e.get()
     e.delete(0, END)
@@ -57,7 +60,7 @@ def button_equal():
 # If the "-" operator is pressed the program will subtract the first and second numbers.
     else:
         e.insert(0, "Invalid!!!")
-#If none of the operators are selected it will print "Invalid!!!"
+# If none of the operators are selected it will print "Invalid!!!"
 
 # # Lambda function is used for this code.
 # I believe these buttons are created to select if the user wants to enter a number from 0-9 and if they want to add, equal, or want to clear it.
