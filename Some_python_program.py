@@ -1,7 +1,7 @@
 # M9_Team
 
 # Program description goes here
-# Updated on: November 19
+# Updated on: November 24
 # Updated by: Martin, Fahad
 #
 #
@@ -26,7 +26,8 @@ def button_click(number):
 def button_clear():
     e.delete(0, END)
 
-# Document what the following lines of code do here
+# Defines the function: button_operator. When an operator button is clicked such as +, -, x, or / it will save that number and operator before performing a calculation. 
+# It also converts the first number from a string to an integer
 def button_operator(operator):
     first_number = e.get()
     global f_num
@@ -35,7 +36,7 @@ def button_operator(operator):
     num_operator = operator
     e.delete(0, END)
 
-# Document what the following lines of code do here
+# These lines of code are where the calculation happens.
 
 # you might want to consider adding documentation on a line by line basis since
 # this is a critical function for the program
@@ -54,10 +55,10 @@ def button_equal():
         e.insert(0, "Invalid!!!")
 
 # # Lambda function is used for this code.
-# I believe this buttons are created to select if the user wants to enter a number from 0-9 and if they wants to add, equal or wants to clear it.
+# I believe these buttons are created to select if the user wants to enter a number from 0-9 and if they want to add, equal, or want to clear it.
 #
 #
-# NOTE: We did not cover Lambda functins in class. A Lambda Function 
+# NOTE: We did not cover Lambda functions in class. A Lambda Function 
 # in Python programming is an anonymous function
 # or a function having no name. It is a small and restricted function 
 # having no more than one line. In the case below, the Lambda function code
@@ -79,14 +80,14 @@ button_add =  Button(root, text="+", padx=39, pady=20, command=lambda: button_op
 button_equal =  Button(root, text="   =   ", padx=79, pady=20, command=button_equal)
 button_clear =  Button(root, text="Clear", padx=79, pady=20, command=button_clear)
 
-# This is same like from the above code but this buttons is use to subtract, multiply and divide. To understand it better they also provided buttons with symbols of subtract, multiply & divide. 
+# This is the same as the above code but this button is used to subtract, multiply, and divide. To understand it better they also provided buttons with symbols of subtract, multiply & divide. 
 
 # See the description of a Lambda function above
 button_subtract =  Button(root, text="-", padx=40, pady=20, command=lambda: button_operator("-"))
 button_multiply =  Button(root, text="*", padx=40, pady=20, command=lambda: button_operator("*"))
 button_divide =  Button(root, text="/", padx=40, pady=20, command=lambda: button_operator("/"))
 
-# The below code is assigning buttons in the row and in columns to make it understandable & easier for users.
+# The below code assigns buttons in the row and in columns to make it understandable & easier for users.
 
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
