@@ -27,7 +27,7 @@ def button_clear():
     e.delete(0, END)
 
 # Defines the function: button_operator. When an operator button is clicked such as +, -, x, or / it will save that number and operator before performing a calculation. 
-# It also converts the first number from a string to an integer
+# It also converts the first number from a string to an integer.
 def button_operator(operator):
     first_number = e.get()
     global f_num
@@ -38,21 +38,26 @@ def button_operator(operator):
 
 # These lines of code are where the calculation happens.
 
-# you might want to consider adding documentation on a line by line basis since
-# this is a critical function for the program
+# When the equal button is pressed the following conditional statements will be executed.
+# The function will check which operator was pressed and perform the calculation with that value.
 def button_equal():
     second_number = e.get()
     e.delete(0, END)
     if num_operator == '+':
         e.insert(0, f_num + int(second_number))
+# If the "+" operator is pressed the program will add the first and second numbers.
     elif num_operator == '*':
         e.insert(0, f_num * int(second_number))
+# If the "*" operator is pressed the program will multiply the first and second numbers.
     elif num_operator == '/':
         e.insert(0, f_num / int(second_number))
+# If the "/" operator is pressed the program will divide the first and second numbers.
     elif num_operator == '-':
         e.insert(0, f_num - int(second_number))
+# If the "-" operator is pressed the program will subtract the first and second numbers.
     else:
         e.insert(0, "Invalid!!!")
+#If none of the operators are selected it will print "Invalid!!!"
 
 # # Lambda function is used for this code.
 # I believe these buttons are created to select if the user wants to enter a number from 0-9 and if they want to add, equal, or want to clear it.
